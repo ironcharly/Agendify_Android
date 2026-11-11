@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Agendify_Andorid</string>
+    <string name="app_name">Agendify Android</string>
+    <string name="title_lista_turnos">Mis Turnos Reservados</string>
+
+    <string name="title_crear_turno">Nueva Reserva</string>
+    <string name="hint_nombre">Nombre completo</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_email">Correo Electrónico</string>
+    <string name="hint_fecha">Fecha (YYYY-MM-DD)</string>
+    <string name="hint_hora">Hora (HH:MM)</string>
+    <string name="btn_reservar">Confirmar Reserva</string>
+
+    <string name="title_detalle_turno">Detalle del Turno</string>
+
+    <string name="btn_cancelar_turno">Cancelar Turno</string>
+
+    <!-- Mensajes de Error y Estado -->
+    <string name="error_conexion">Sin conexión a Internet. Verifique su red.</string>
+    <string name="error_campos_vacios">Por favor complete todos los campos.</string>
+    <string name="error_api_generic">Ocurrió un error en el servidor (%1$d).</string>
+
+    <string name="msg_cargando">Cargando datos...</string>
+    <string name="msg_turno_creado">Reserva creada con éxito.</string>
+
+    <string name="msg_turno_cancelado">Turno cancelado correctamente.</string>
 </resources>
