@@ -1,4 +1,4 @@
-package com.example.agendify_andorid;
+package com.example.agendify_android;
 
 import android.content.Context;
 

@@ -1,26 +1,34 @@
 <resources>
-    <string name="app_name">Agendify Android</string>
-    <string name="title_lista_turnos">Mis Turnos Reservados</string>
+    <string name="app_name">Agendify</string>
 
-    <string name="title_crear_turno">Nueva Reserva</string>
-    <string name="hint_nombre">Nombre completo</string>
+    <string name="cargando">Cargando datos…</string>
+    <string name="error_conexion">Sin conexión. Revisá internet o modo avión.</string>
+    <string name="error_api_generic">Error de API (%1$d)</string>
+    <string name="error_datos_invalidos">Los datos ingresados no son válidos.</string>
+    <string name="error_no_encontrado">Turno no encontrado.</string>
+    <string name="error_validacion">No se pudo validar: %1$s</string>
+    <string name="error_id_invalido">ID de turno inválido.</string>
+
+    <string name="titulo_mis_turnos">Mis Turnos</string>
+    <string name="sin_turnos">No hay turnos registrados.</string>
+
+    <string name="titulo_crear_turno">Crear Nuevo Turno</string>
+    <string name="hint_nombre_cliente">Nombre del Cliente</string>
     <string name="hint_telefono">Teléfono</string>
-    <string name="hint_email">Correo Electrónico</string>
+    <string name="hint_email_cliente">Email del Cliente</string>
     <string name="hint_fecha">Fecha (YYYY-MM-DD)</string>
     <string name="hint_hora">Hora (HH:MM)</string>
-    <string name="btn_reservar">Confirmar Reserva</string>
+    <string name="btn_guardar_turno">Guardar Turno</string>
+    <string name="turno_creado">Turno creado correctamente</string>
 
-    <string name="title_detalle_turno">Detalle del Turno</string>
-
-    <string name="btn_cancelar_turno">Cancelar Turno</string>
-
-    <!-- Mensajes de Error y Estado -->
-    <string name="error_conexion">Sin conexión a Internet. Verifique su red.</string>
-    <string name="error_campos_vacios">Por favor complete todos los campos.</string>
-    <string name="error_api_generic">Ocurrió un error en el servidor (%1$d).</string>
-
-    <string name="msg_cargando">Cargando datos...</string>
-    <string name="msg_turno_creado">Reserva creada con éxito.</string>
-
-    <string name="msg_turno_cancelado">Turno cancelado correctamente.</string>
+    <string name="titulo_detalle_turno">Detalle del Turno</string>
+    <string name="label_cliente">Cliente: %1$s</string>
+    <string name="label_telefono">Teléfono: %1$s</string>
+    <string name="label_email">Email: %1$s</string>
+    <string name="label_servicio">Servicio: %1$s</string>
+    <string name="label_inicio">Inicio: %1$s</string>
+    <string name="label_fin">Fin: %1$s</string>
+    <string name="label_estado">Estado: %1$s</string>
+    <string name="label_codigo">Código: %1$s</string>
+    <string name="volver">Volver</string>
 </resources>

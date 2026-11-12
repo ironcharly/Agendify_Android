@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DetalleTurnoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="@string/titulo_detalle_turno"
+        app:titleTextColor="@android:color/white"
+        app:navigationIconTint="@android:color/white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/contenedorDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/tvDetalleCliente" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+            <TextView android:id="@+id/tvDetalleTelefono" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+            <TextView android:id="@+id/tvDetalleEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+            <TextView android:id="@+id/tvDetalleServicio" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+            <TextView android:id="@+id/tvDetalleInicio" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+            <TextView android:id="@+id/tvDetalleFin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+            <TextView android:id="@+id/tvDetalleEstado" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+            <TextView android:id="@+id/tvDetalleCodigo" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
