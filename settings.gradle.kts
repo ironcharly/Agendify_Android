@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Agendify_Andorid"
+rootProject.name = "Agendify_Android"
 include(":app")

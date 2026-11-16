@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.agendify_andorid"
+    namespace = "com.example.agendify_android"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.agendify_andorid"
+        applicationId = "com.example.agendify_android"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -30,6 +30,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -37,6 +40,12 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.material)
+    implementation(libs.recyclerview)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp.logging)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.ext.junit)
