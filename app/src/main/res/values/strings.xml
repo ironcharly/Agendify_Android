@@ -16,8 +16,10 @@
     <string name="hint_nombre_cliente">Nombre del Cliente</string>
     <string name="hint_telefono">Teléfono</string>
     <string name="hint_email_cliente">Email del Cliente</string>
-    <string name="hint_fecha">Fecha (YYYY-MM-DD)</string>
-    <string name="hint_hora">Hora (HH:MM)</string>
+    <string name="hint_fecha">Fecha (toque para elegir)</string>
+    <string name="hint_hora">Hora (toque para elegir)</string>
+    <string name="seleccionar_fecha">Elegir fecha</string>
+    <string name="seleccionar_hora">Elegir hora</string>
     <string name="btn_guardar_turno">Guardar Turno</string>
     <string name="turno_creado">Turno creado correctamente</string>
 

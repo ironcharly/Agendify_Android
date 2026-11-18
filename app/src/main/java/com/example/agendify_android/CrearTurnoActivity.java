@@ -16,9 +16,17 @@ import com.example.agendify_android.model.Turno;
 import com.example.agendify_android.model.TurnoRequest;
 import com.example.agendify_android.network.ApiClient;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.datepicker.CalendarConstraints;
+import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.timepicker.MaterialTimePicker;
+import com.google.android.material.timepicker.TimeFormat;
 import com.google.gson.Gson;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 import java.util.regex.Pattern;
 
 import retrofit2.Call;
@@ -57,6 +65,8 @@ public class CrearTurnoActivity extends AppCompatActivity {
         btnGuardar = findViewById(R.id.btnGuardar);
 
         btnGuardar.setOnClickListener(v -> intentarCrear());
+        etFecha.setOnClickListener(v -> mostrarDatePicker());
+        etHora.setOnClickListener(v -> mostrarTimePicker());
     }
 
     private void intentarCrear() {
@@ -120,6 +130,36 @@ public class CrearTurnoActivity extends AppCompatActivity {
                 Toast.makeText(CrearTurnoActivity.this, R.string.error_conexion, Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    private void mostrarDatePicker() {
+        CalendarConstraints limite = new CalendarConstraints.Builder()
+                .setStart(MaterialDatePicker.todayInUtcMilliseconds())
+                .build();
+
+        MaterialDatePicker<Long> picker = MaterialDatePicker.Builder.datePicker()
+                .setTitleText(R.string.seleccionar_fecha)
+                .setCalendarConstraints(limite)
+                .build();
+
+        picker.addOnPositiveButtonClickListener(seleccion -> {
+            SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+            formato.setTimeZone(TimeZone.getTimeZone("UTC"));
+            etFecha.setText(formato.format(new Date(seleccion)));
+        });
+        picker.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    private void mostrarTimePicker() {
+        MaterialTimePicker picker = new MaterialTimePicker.Builder()
+                .setTimeFormat(TimeFormat.CLOCK_24H)
+                .setTitleText(R.string.seleccionar_hora)
+                .build();
+
+        picker.addOnPositiveButtonClickListener(v -> etHora.setText(
+                String.format(Locale.getDefault(), "%02d:%02d",
+                        picker.getHour(), picker.getMinute())));
+        picker.show(getSupportFragmentManager(), "timePicker");
     }
 
     private String leerError(Response<?> response) {
