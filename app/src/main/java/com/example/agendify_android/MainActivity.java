@@ -18,6 +18,8 @@ import com.example.agendify_android.adapter.TurnosAdapter;
 import com.example.agendify_android.model.Turno;
 import com.example.agendify_android.network.ApiClient;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,9 +49,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        findViewById(R.id.btnLogout).setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            finish();
+        });
         setContentView(R.layout.activity_main);
         setSupportActionBar(findViewById(R.id.toolbarPrincipal));
         setTitle(R.string.titulo_mis_turnos);
+
 
         recyclerView = findViewById(R.id.recyclerViewTurnos);
         progressBar = findViewById(R.id.progressBarPrincipal);
