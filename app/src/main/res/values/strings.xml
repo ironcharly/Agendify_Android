@@ -33,4 +33,16 @@
     <string name="label_estado">Estado: %1$s</string>
     <string name="label_codigo">Código: %1$s</string>
     <string name="volver">Volver</string>
+
+//Login
+    <string name="titulo_login">Iniciar sesión</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Entrar</string>
+    <string name="btn_registro">Crear cuenta</string>
+    <string name="btn_logout">Cerrar sesión</string>
+    <string name="error_login">No se pudo iniciar sesión. Revisá email y contraseña.</string>
+    <string name="error_registro">No se pudo crear la cuenta.</string>
+    <string name="login_campos_vacios">Completá email y contraseña.</string>
+
 </resources>
