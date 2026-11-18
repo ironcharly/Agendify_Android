@@ -29,6 +29,11 @@
             android:windowSoftInputMode="adjustResize" />
 
         <activity
+            android:name=".CrearCuentaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
             android:name=".CrearTurnoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

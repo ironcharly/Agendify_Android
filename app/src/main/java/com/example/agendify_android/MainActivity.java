@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         findViewById(R.id.btnLogout).setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
             finish();
         });
-        setContentView(R.layout.activity_main);
         setSupportActionBar(findViewById(R.id.toolbarPrincipal));
         setTitle(R.string.titulo_mis_turnos);
 

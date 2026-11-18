@@ -34,7 +34,7 @@
     <string name="label_codigo">Código: %1$s</string>
     <string name="volver">Volver</string>
 
-//Login
+    <!-- Login -->
     <string name="titulo_login">Iniciar sesión</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Contraseña</string>
@@ -44,5 +44,12 @@
     <string name="error_login">No se pudo iniciar sesión. Revisá email y contraseña.</string>
     <string name="error_registro">No se pudo crear la cuenta.</string>
     <string name="login_campos_vacios">Completá email y contraseña.</string>
+
+    <!-- Crear cuenta -->
+    <string name="titulo_crear_cuenta">Crear cuenta</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    <string name="error_email_en_uso">Este email ya está registrado.</string>
+    <string name="error_password_debil">La contraseña es demasiado débil (mínimo 6 caracteres).</string>
+    <string name="error_email_invalido">El email no es válido.</string>
 
 </resources>

@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         btnRegistro = findViewById(R.id.btnRegistro);
 
         btnLogin.setOnClickListener(v -> login());
-        btnRegistro.setOnClickListener(v -> registrar());
+        btnRegistro.setOnClickListener(v -> irACrearCuenta());
     }
 
     private void login() {
@@ -60,33 +60,13 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-    private void registrar() {
-        String email = etEmail.getText().toString().trim();
-        String pass = etPassword.getText().toString().trim();
-        if (email.isEmpty() || pass.isEmpty()) {
-            Toast.makeText(this, R.string.login_campos_vacios, Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (pass.length() < 6) {
-            Toast.makeText(this, R.string.error_datos_invalidos, Toast.LENGTH_SHORT).show();
-            return;
-        }
-        setLoading(true);
-        auth.createUserWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(task -> {
-                    setLoading(false);
-                    if (task.isSuccessful()) {
-                        irAMain();
-                    } else {
-                        Toast.makeText(this, R.string.error_registro, Toast.LENGTH_LONG).show();
-                    }
-                });
-    }
-
     private void setLoading(boolean loading) {
         progressBar.setVisibility(loading ? View.VISIBLE : View.GONE);
         btnLogin.setEnabled(!loading);
-        btnRegistro.setEnabled(!loading);
+    }
+
+    private void irACrearCuenta() {
+        startActivity(new Intent(this, CrearCuentaActivity.class));
     }
 
     private void irAMain() {
