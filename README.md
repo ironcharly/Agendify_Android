@@ -52,7 +52,9 @@ Agendify Android es un cliente móvil sobre la misma base de turnos de la web:
 | `DetalleTurnoActivity` | Detalle por ID (Intent extra) | `GET /backend/api_turnos.php?id={id}` |
 | `CrearTurnoActivity` | Alta de turno (devuelve `RESULT_OK`) | `POST /backend/api_turnos.php` |
 
-Base URL única (R7): definida en `ApiClient.BASE_URL` → `https://webapp-production-44888520.up.railway.app/`
+Base URL única (R7): definida en `ApiClient.BASE_URL` → `https://webapp-production-44888520.up.railway.app/` // 
+
+Y también `https://webapp-production-44888520.up.railway.app/backend/api_turnos.php`
 
 ## Tecnologías
 
@@ -78,3 +80,19 @@ Base URL única (R7): definida en `ApiClient.BASE_URL` → `https://webapp-produ
 - Se reutiliza la API REST de la 1.ª entrega en lugar de duplicar backend.
 - Fecha/hora en crear turno con pickers Material para evitar formatos inválidos.
 - Firebase Auth como  servicio cloud extra.
+
+## Limitaciones conocidas
+
+- El registro desde emulador a veces falla por reCAPTCHA (`CONFIGURATION_NOT_FOUND` si Auth no está habilitado; en emuladores también puede fallar el token). Workaround: usuario creado en Firebase Console + login.
+- La lista muestra turnos generales de la API (no “mis turnos” por cuenta Firebase).
+- No implementa modificar/eliminar turno en la UI (consideramos que ya hay detalle por ID).
+- El Login podría usarse para dar de alta a usuarios dentro de la app. 
+
+## Entrega
+
+En el espacio correspondiente entregamos: 
+
+- Link de repo en GitHub (public).
+- APK debug adjunto en el campus.
+- Video demo: ver link en la tabla de arriba.
+- API y frontend online en Railway (HTTPS).
