@@ -18,7 +18,7 @@ Desarrollada como proyecto integrador para el espacio curricular APLICACIONES M�
 | Web app (1.ª entrega) | https://webapp-production-44888520.up.railway.app/ |
 | API REST consumida | https://webapp-production-44888520.up.railway.app/backend/api_turnos.php |
 | Proveedor de deploy | Railway |
-| Video demo (3–5 min) | _PEGUEMOS ACA LUEGO EL LINK DEL VIDEO _ |
+| Video demo (3–5 min) | https://youtu.be/8C8U4Hos2go?si=NXOYBhzxoB5JQxGs |
 
 ## Usuario de prueba (Firebase Auth)
 
